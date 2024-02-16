@@ -5,7 +5,7 @@ import Exceptions.EmptyInputException;
 import Exceptions.IncorrectDataFormatException;
 import Exceptions.UserDataArrayLengthException;
 import Exceptions.ValueException;
-import Exceptions.WriteData;
+
 
 public class UserData {
     public static void getData() throws EmptyInputException, UserDataArrayLengthException, NumberFormatException, ValueException, IncorrectDataFormatException, IOException{

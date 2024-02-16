@@ -1,4 +1,4 @@
-package Exceptions;
+
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -28,3 +28,4 @@ public class WriteData {
         }
     }
 }
+
