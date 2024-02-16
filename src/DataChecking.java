@@ -1,7 +1,13 @@
 import Exceptions.IncorrectDataFormatException;
 import Exceptions.ValueException;
 
+
 public class DataChecking {
+    /**
+     * 
+     * @param gender - Пол (f или m)
+     * @throws ValueException - Неправильно указано значение параметра gender
+     */
     public static void genderCheck(String gender) throws ValueException{
         if(gender.length() == 1) {
             gender = gender.toLowerCase();
@@ -18,6 +24,12 @@ public class DataChecking {
         }
     }
 
+    /**
+     * 
+     * @param phoneNumber = номер телефона
+     * @throws ValueException - Неправильное кол-во цифр в номере
+     * @throws NumberFormatException - Ошибка формата данных, номер должен быть Integer
+     */
     public static void phoneNumberCheck(String phoneNumber) throws ValueException, NumberFormatException {
         if(phoneNumber.length() == 11) {
             try {
@@ -31,6 +43,12 @@ public class DataChecking {
             throw new ValueException("Неправильный формат номера телефона. Должно быть 11 цифр.");
         }
     }
+
+    /**
+     * 
+     * @param date дата рождения
+     * @throws IncorrectDataFormatException - Неверный формат даты
+     */
     public static void DateFormatCheck(String date) throws IncorrectDataFormatException{
         char[] dateCheckData = date.toCharArray();
         if (dateCheckData.length == 10 & (dateCheckData[2] == '.' && dateCheckData[5] == '.'));
